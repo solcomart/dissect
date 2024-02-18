@@ -43,7 +43,7 @@ abstract class Util
      */
     public static function stringLength(string $str): int
     {
-        return mb_strlen($str);
+        return mb_strlen(mb_convert_encoding($str, 'ISO-8859-1'));
     }
 
     /**
