@@ -17,9 +17,7 @@ class AbstractLexerTest extends TestCase
         $this->lexer = new StubLexer();
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function lexShouldDelegateToExtractTokenUpdatingTheLineAndOffsetAccordingly(): void
     {
         $stream = $this->lexer->lex("ab\nc");
@@ -40,9 +38,7 @@ class AbstractLexerTest extends TestCase
         $this->assertEquals(2, $stream->getCurrentToken()->getLine());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function lexShouldAppendAnEofTokenAutomatically(): void
     {
         $stream = $this->lexer->lex("abc");
@@ -52,9 +48,7 @@ class AbstractLexerTest extends TestCase
         $this->assertEquals(1, $stream->getCurrentToken()->getLine());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function lexShouldThrowAnExceptionOnAnUnrecognizableToken(): void
     {
         try {
@@ -65,18 +59,14 @@ class AbstractLexerTest extends TestCase
         }
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function lexShouldNormalizeLineEndingsBeforeLexing(): void
     {
         $stream = $this->lexer->lex("a\r\nb");
         $this->assertEquals("\n", $stream->get(1)->getValue());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function lexShouldSkipTokensIfToldToDoSo(): void
     {
         $stream = $this->lexer->lex('aeb');

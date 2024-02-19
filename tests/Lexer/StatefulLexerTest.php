@@ -16,9 +16,7 @@ class StatefulLexerTest extends TestCase
         $this->lexer = new StatefulLexer();
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function addingNewTokenShouldThrowAnExceptionWhenNoStateIsBeingBuilt(): void
     {
         $this->expectExceptionMessage("Define a lexer state first.");
@@ -26,9 +24,7 @@ class StatefulLexerTest extends TestCase
         $this->lexer->regex('WORD', '/[a-z]+/');
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function anExceptionShouldBeThrownOnLexingWithoutAStartingState(): void
     {
         $this->expectException(LogicException::class);
@@ -36,9 +32,7 @@ class StatefulLexerTest extends TestCase
         $this->lexer->lex('foo');
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function theStateMechanismShouldCorrectlyPushAndPopStatesFromTheStack(): void
     {
         /** @noinspection PhpPossiblePolymorphicInvocationInspection */
@@ -63,9 +57,7 @@ class StatefulLexerTest extends TestCase
         $this->assertEquals('quux', $stream->get(6)->getValue());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function defaultActionShouldBeNop(): void
     {
         $this->lexer->state('root')

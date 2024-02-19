@@ -8,9 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class KernelSetTest extends TestCase
 {
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function kernelsShouldBeProperlyHashedAndOrdered(): void
     {
         $this->assertEquals(array(1, 3, 6, 7), KernelSet::hashKernel(array(
@@ -21,9 +19,7 @@ class KernelSetTest extends TestCase
         )));
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function insertShouldInsertANewNodeIfNoIdenticalKernelExists(): void
     {
         $set = new KernelSet();

@@ -9,9 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 class ItemTest extends TestCase
 {
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getActiveComponentShouldReturnTheComponentAboutToBeEncountered(): void
     {
         $item = new Item(new Rule(1, 'A', ['a', 'b', 'c']), 1);
@@ -19,9 +17,7 @@ class ItemTest extends TestCase
         $this->assertEquals('b', $item->getActiveComponent());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function itemShouldBeAReduceItemIfAllComponentsHaveBeenEncountered(): void
     {
         $item = new Item(new Rule(1, 'A', ['a', 'b', 'c']), 1);
@@ -31,9 +27,7 @@ class ItemTest extends TestCase
         $this->assertTrue($item->isReduceItem());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function itemShouldPumpLookaheadIntoConnectedItems(): void
     {
         $item1 = new Item(new Rule(1, 'A', ['a', 'b', 'c']), 1);
@@ -45,9 +39,7 @@ class ItemTest extends TestCase
         $this->assertContains('d', $item2->getLookahead());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function itemShouldPumpTheSameLookaheadOnlyOnce(): void
     {
         $item1 = new Item(new Rule(1, 'A', ['a', 'b', 'c']), 1);
@@ -70,9 +62,7 @@ class ItemTest extends TestCase
         $item1->pump('d');
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getUnrecognizedComponentsShouldReturnAllComponentAfterTheDottedOne(): void
     {
         $item = new Item(new Rule(1, 'A', ['a', 'b', 'c']), 1);

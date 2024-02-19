@@ -9,9 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 class ProductionTableDumperTest extends TestCase
 {
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function theWrittenTableShouldBeAsCompactAsPossible(): void
     {
         $grammar = new ExampleGrammar();

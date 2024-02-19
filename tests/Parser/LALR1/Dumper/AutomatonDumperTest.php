@@ -18,9 +18,7 @@ class AutomatonDumperTest extends TestCase
         $this->dumper = new AutomatonDumper($automaton);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function dumpDumpsTheEntireAutomaton(): void
     {
         $this->assertStringEqualsFile(
@@ -29,9 +27,7 @@ class AutomatonDumperTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function dumpStateDumpsOnlyTheSpecifiedStateAndTransitions(): void
     {
         $this->assertStringEqualsFile(

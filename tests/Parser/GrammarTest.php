@@ -15,9 +15,7 @@ class GrammarTest extends TestCase
         $this->grammar = new ExampleGrammar();
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function ruleAlternativesShouldHaveTheSameName(): void
     {
         $rules = $this->grammar->getRules();
@@ -26,9 +24,7 @@ class GrammarTest extends TestCase
         $this->assertEquals('Foo', $rules[2]->getName());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function theGrammarShouldBeAugmentedWithAStartRule(): void
     {
         $this->assertEquals(
@@ -42,18 +38,14 @@ class GrammarTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function shouldReturnAlternativesGroupedByName(): void
     {
         $rules = $this->grammar->getGroupedRules();
         $this->assertCount(2, $rules['Foo']);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function nonterminalsShouldBeDetectedFromRuleNames(): void
     {
         $this->assertTrue($this->grammar->hasNonterminal('Foo'));

@@ -13,9 +13,7 @@ class AnalyzerTest extends TestCase
 {
     protected ?Analyzer $analyzer = null;
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function automatonShouldBeCorrectlyBuilt(): void
     {
         $grammar = new Grammar();
@@ -36,9 +34,7 @@ class AnalyzerTest extends TestCase
         $this->assertEquals(4, $table[3]['b']);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function lookaheadShouldBeCorrectlyPumped(): void
     {
         $grammar = new Grammar();
@@ -93,9 +89,7 @@ class AnalyzerTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function parseTableShouldBeCorrectlyBuilt(): void
     {
         $grammar = new Grammar();
@@ -134,9 +128,7 @@ class AnalyzerTest extends TestCase
         $this->assertEquals(3, $table['goto'][2]['S']);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function unexpectedConflictsShouldThrowAnException(): void
     {
         $grammar = new Grammar();
@@ -164,9 +156,7 @@ class AnalyzerTest extends TestCase
         }
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function expectedConflictsShouldBeRecorded(): void
     {
         $grammar = new Grammar();

@@ -9,9 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 class DebugTableDumperTest extends TestCase
 {
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function itDumpsAHumanReadableParseTableWithExplainingComments(): void
     {
         $grammar = new ExampleGrammar();

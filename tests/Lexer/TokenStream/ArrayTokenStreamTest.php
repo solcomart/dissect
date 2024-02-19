@@ -23,17 +23,13 @@ class ArrayTokenStreamTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function theCursorShouldBeOnFirstTokenByDefault(): void
     {
         $this->assertEquals('6', $this->stream->getCurrentToken()->getValue());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getPositionShouldReturnCurrentPosition(): void
     {
         $this->stream->seek(2);
@@ -42,79 +38,61 @@ class ArrayTokenStreamTest extends TestCase
         $this->assertEquals(3, $this->stream->getPosition());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function lookAheadShouldReturnTheCorrectToken(): void
     {
         $this->assertEquals('5', $this->stream->lookAhead(2)->getValue());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function lookAheadShouldThrowAnExceptionWhenInvalid(): void
     {
         $this->expectException(OutOfBoundsException::class);
         $this->stream->lookAhead(15);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getShouldReturnATokenByAbsolutePosition(): void
     {
         $this->assertEquals('3', $this->stream->get(4)->getValue());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getShouldThrowAnExceptionWhenInvalid(): void
     {
         $this->expectException(OutOfBoundsException::class);
         $this->stream->get(15);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function moveShouldMoveTheCursorByToAnAbsolutePosition(): void
     {
         $this->stream->move(2);
         $this->assertEquals('5', $this->stream->getCurrentToken()->getValue());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function moveShouldThrowAnExceptionWhenInvalid(): void
     {
         $this->expectException(OutOfBoundsException::class);
         $this->stream->move(15);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function seekShouldMoveTheCursorByRelativeOffset(): void
     {
         $this->stream->seek(4);
         $this->assertEquals('3', $this->stream->getCurrentToken()->getValue());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function seekShouldThrowAnExceptionWhenInvalid(): void
     {
         $this->expectException(OutOfBoundsException::class);
         $this->stream->seek(15);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function nextShouldMoveTheCursorOneTokenAhead(): void
     {
         $this->stream->next();
@@ -124,9 +102,7 @@ class ArrayTokenStreamTest extends TestCase
         $this->assertEquals('5', $this->stream->getCurrentToken()->getValue());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function nextShouldThrowAnExceptionWhenAtTheEndOfTheStream(): void
     {
         $this->expectException(OutOfBoundsException::class);

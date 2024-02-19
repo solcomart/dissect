@@ -9,9 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 class StateTest extends TestCase
 {
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function stateShouldKeepItemsByRuleNumberAndPosition(): void
     {
         $item1 = new Item(new Rule(1, 'E', ['E', '+', 'T']), 0);

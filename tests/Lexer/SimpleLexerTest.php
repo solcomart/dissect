@@ -25,9 +25,7 @@ class SimpleLexerTest extends TestCase
             ->skip('WS');
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function simpleLexerShouldWalkThroughTheRecognizers(): void
     {
         $stream = $this->lexer->lex('a (b) c');
@@ -38,9 +36,7 @@ class SimpleLexerTest extends TestCase
         $this->assertEquals('C', $stream->get(4)->getType());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function simpleLexerShouldSkipSpecifiedTokens(): void
     {
         $stream = $this->lexer->lex('a (b) c');
@@ -50,9 +46,7 @@ class SimpleLexerTest extends TestCase
         }
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function simpleLexerShouldReturnTheBestMatch(): void
     {
         $this->lexer->token('CLASS', 'class');

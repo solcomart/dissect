@@ -18,9 +18,7 @@ class ParserTest extends TestCase
         $this->parser = new Parser(new ArithGrammar());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function parserShouldProcessTheTokenStreamAndUseGrammarCallbacksForReductions(): void
     {
         $this->assertEquals(-2, $this->parser->parse($this->lexer->lex(
@@ -36,9 +34,7 @@ class ParserTest extends TestCase
             '4 ** 3 ** 2')));
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function parserShouldThrowAnExceptionOnInvalidInput(): void
     {
         try {

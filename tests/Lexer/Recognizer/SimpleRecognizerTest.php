@@ -8,9 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class SimpleRecognizerTest extends TestCase
 {
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function recognizerShouldMatchAndPassTheValueByReference(): void
     {
         $recognizer = new SimpleRecognizer('class');
@@ -21,9 +19,7 @@ class SimpleRecognizerTest extends TestCase
         $this->assertEquals('class', $value);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function recognizerShouldFailAndTheValueShouldStayNull(): void
     {
         $recognizer = new SimpleRecognizer('class');

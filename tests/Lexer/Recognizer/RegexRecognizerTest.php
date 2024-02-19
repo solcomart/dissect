@@ -8,9 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class RegexRecognizerTest extends TestCase
 {
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function recognizerShouldMatchAndPassTheValueByReference(): void
     {
         $recognizer = new RegexRecognizer('/[a-z]+/');
@@ -21,9 +19,7 @@ class RegexRecognizerTest extends TestCase
         $this->assertEquals('lorem', $value);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function recognizerShouldFailAndTheValueShouldStayNull(): void
     {
         $recognizer = new RegexRecognizer('/[a-z]+/');
@@ -33,9 +29,7 @@ class RegexRecognizerTest extends TestCase
         $this->assertNull($value);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function recognizerShouldFailIfTheMatchIsNotAtTheBeginningOfTheString(): void
     {
         $recognizer = new RegexRecognizer('/[a-z]+/');

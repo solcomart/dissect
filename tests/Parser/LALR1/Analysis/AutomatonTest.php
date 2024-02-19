@@ -17,9 +17,7 @@ class AutomatonTest extends TestCase
         $this->automaton->addState(new State(1, []));
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function addingATransitionShouldBeVisibleInTheTransitionTable(): void
     {
         $this->automaton->addTransition(0, 'a', 1);
@@ -28,9 +26,7 @@ class AutomatonTest extends TestCase
         $this->assertEquals(1, $table[0]['a']);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function aNewStateShouldBeIdentifiedByItsNumber(): void
     {
         $state = new State(2, []);
