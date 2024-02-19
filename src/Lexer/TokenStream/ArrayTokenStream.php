@@ -24,10 +24,8 @@ class ArrayTokenStream implements TokenStream
 
     /**
      * Constructor.
-     *
-     * @param Token[] $tokens The tokens in this stream.
      */
-    public function __construct(array $tokens)
+    public function __construct(Token ...$tokens)
     {
         $this->tokens = $tokens;
     }

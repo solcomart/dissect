@@ -91,6 +91,6 @@ abstract class AbstractLexer implements Lexer
 
         $tokens[] = new CommonToken(Parser::EOF_TOKEN_TYPE, '', $this->line);
 
-        return new ArrayTokenStream($tokens);
+        return new ArrayTokenStream(...$tokens);
     }
 }

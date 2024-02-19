@@ -14,13 +14,13 @@ class ArrayTokenStreamTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->stream = new ArrayTokenStream([
+        $this->stream = new ArrayTokenStream(
             new CommonToken('INT', '6', 1),
             new CommonToken('PLUS', '+', 1),
             new CommonToken('INT', '5', 1),
             new CommonToken('MINUS', '-', 1),
             new CommonToken('INT', '3', 1),
-        ]);
+        );
     }
 
     /**
