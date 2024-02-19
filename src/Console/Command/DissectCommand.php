@@ -29,28 +29,28 @@ class DissectCommand extends Command
             ->addOption('state', 's', InputOption::VALUE_REQUIRED, 'Exports only the specified state instead of the entire DFA.')
             ->addOption('output-dir', 'o', InputOption::VALUE_REQUIRED, 'Overrides the default output directory.')
             ->setHelp(<<<EOT
-Analyzes the given grammar and, if successful, exports the parse table to a PHP
-file.
-
-By default, the output directory is taken to be the one in which the grammar is
-defined. You can change that with the <info>--output-dir</info> option:
-
- <info>--output-dir=../some/other/dir</info>
-
-The parse table is by default written with minimal whitespace to make it compact.
-If you wish to inspect the table manually, you can export it in a readable and
-well-commented way with the <info>--debug</info> option.
-
-If you wish to inspect the handle-finding automaton for your grammar (perhaps
-to aid with grammar debugging), use the <info>--dfa</info> option. When in use, Dissect
-will create a file with the automaton exported as a Graphviz graph
-in the output directory.
-
-Additionally, you can use the <info>--state</info> option to export only the specified
-state and any relevant transitions:
-
- <info>--dfa --state=5</info>
-EOT
+                Analyzes the given grammar and, if successful, exports the parse table to a PHP
+                file.
+                
+                By default, the output directory is taken to be the one in which the grammar is
+                defined. You can change that with the <info>--output-dir</info> option:
+                
+                 <info>--output-dir=../some/other/dir</info>
+                
+                The parse table is by default written with minimal whitespace to make it compact.
+                If you wish to inspect the table manually, you can export it in a readable and
+                well-commented way with the <info>--debug</info> option.
+                
+                If you wish to inspect the handle-finding automaton for your grammar (perhaps
+                to aid with grammar debugging), use the <info>--dfa</info> option. When in use, Dissect
+                will create a file with the automaton exported as a Graphviz graph
+                in the output directory.
+                
+                Additionally, you can use the <info>--state</info> option to export only the specified
+                state and any relevant transitions:
+                
+                 <info>--dfa --state=5</info>
+                EOT
             );
     }
 
