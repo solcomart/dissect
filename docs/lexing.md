@@ -236,7 +236,7 @@ Now that we've demonstrated how to perform lexical analysis with
 Dissect, we can move onto syntactical analysis, commonly known as
 [parsing][parsing].
 
-[tokenstream]: ../src/Dissect/Lexer/TokenStream/TokenStream.php
+[tokenstream]: ../src/Lexer/TokenStream/TokenStream.php
 [parsing]: parsing.md
 [doctrinelexer]: https://github.com/doctrine/lexer/blob/master/lib/Doctrine/Common/Lexer/AbstractLexer.php
 [doctrine]: https://github.com/doctrine/lexer

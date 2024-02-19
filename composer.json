@@ -43,14 +43,14 @@
         "symfony/console": "for the command-line tool"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "Dissect\\": [
                 "src/"
             ]
         }
     },
     "autoload-dev": {
-        "psr-0": {
+        "psr-4": {
             "Dissect\\": [
                 "tests/"
             ]
