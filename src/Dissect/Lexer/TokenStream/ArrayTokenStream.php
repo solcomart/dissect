@@ -18,9 +18,6 @@ class ArrayTokenStream implements TokenStream
      */
     protected array $tokens;
 
-    /**
-     * @var int
-     */
     protected int $position = 0;
 
     /**

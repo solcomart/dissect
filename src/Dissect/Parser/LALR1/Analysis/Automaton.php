@@ -10,14 +10,8 @@ namespace Dissect\Parser\LALR1\Analysis;
  */
 class Automaton
 {
-    /**
-     * @var array
-     */
     protected array $states = [];
 
-    /**
-     * @var array
-     */
     protected array $transitionTable = [];
 
     /**

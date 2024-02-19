@@ -18,9 +18,6 @@ Unexpected %s at line %d.
 Expected one of %s.
 EOT;
 
-    /**
-     * @var Token
-     */
     protected Token $token;
 
     /**

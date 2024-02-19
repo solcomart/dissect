@@ -14,9 +14,6 @@ use Dissect\Util\Util;
  */
 class SimpleLexer extends AbstractLexer
 {
-    /**
-     * @var array
-     */
     protected array $skipTokens = [];
 
     /**

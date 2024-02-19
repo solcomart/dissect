@@ -9,19 +9,10 @@ namespace Dissect\Parser\LALR1\Analysis;
  */
 class AnalysisResult
 {
-    /**
-     * @var Automaton
-     */
     protected Automaton $automaton;
 
-    /**
-     * @var array
-     */
     protected array $parseTable;
 
-    /**
-     * @var array
-     */
     protected array $resolvedConflicts;
 
     /**

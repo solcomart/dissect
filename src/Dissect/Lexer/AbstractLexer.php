@@ -16,9 +16,6 @@ use Dissect\Util\Util;
  */
 abstract class AbstractLexer implements Lexer
 {
-    /**
-     * @var int
-     */
     private int $line = 1;
 
     /**

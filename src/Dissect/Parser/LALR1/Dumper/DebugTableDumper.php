@@ -13,19 +13,10 @@ use Dissect\Parser\Grammar;
  */
 class DebugTableDumper implements TableDumper
 {
-    /**
-     * @var Grammar
-     */
     protected Grammar $grammar;
 
-    /**
-     * @var StringWriter
-     */
     protected StringWriter $writer;
 
-    /**
-     * @var boolean
-     */
     protected bool $written = false;
 
     /**

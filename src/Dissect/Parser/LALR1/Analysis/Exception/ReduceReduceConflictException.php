@@ -28,19 +28,10 @@ vs:
 (on lookahead "%s" in state %d). Restructure your grammar or choose a conflict resolution mode.
 EOT;
 
-    /**
-     * @var Rule
-     */
     protected Rule $firstRule;
 
-    /**
-     * @var Rule
-     */
     protected Rule $secondRule;
 
-    /**
-     * @var string
-     */
     protected string $lookahead;
 
     /**

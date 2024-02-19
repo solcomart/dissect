@@ -30,24 +30,12 @@ use Dissect\Parser\Rule;
  */
 class Item
 {
-    /**
-     * @var Rule
-     */
     protected Rule $rule;
 
-    /**
-     * @var int
-     */
     protected int $dotIndex;
 
-    /**
-     * @var array
-     */
     protected array $lookahead = [];
 
-    /**
-     * @var array
-     */
     protected array $connected = [];
 
     /**

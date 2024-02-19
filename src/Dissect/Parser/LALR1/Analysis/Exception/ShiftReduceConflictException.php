@@ -24,14 +24,8 @@ The grammar exhibits a shift/reduce conflict on rule:
 (on lookahead "%s" in state %d). Restructure your grammar or choose a conflict resolution mode.
 EOT;
 
-    /**
-     * @var Rule
-     */
     protected Rule $rule;
 
-    /**
-     * @var string
-     */
     protected string $lookahead;
 
     /**

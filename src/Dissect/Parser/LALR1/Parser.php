@@ -15,14 +15,8 @@ use Dissect\Parser as P;
  */
 class Parser implements P\Parser
 {
-    /**
-     * @var Grammar
-     */
     protected Grammar $grammar;
 
-    /**
-     * @var array
-     */
     protected array $parseTable;
 
     /**

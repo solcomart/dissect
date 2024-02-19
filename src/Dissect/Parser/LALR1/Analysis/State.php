@@ -9,19 +9,10 @@ namespace Dissect\Parser\LALR1\Analysis;
  */
 class State
 {
-    /**
-     * @var array
-     */
     protected array $items = [];
 
-    /**
-     * @var array
-     */
     protected array $itemMap = [];
 
-    /**
-     * @var int
-     */
     protected int $number;
 
     /**
