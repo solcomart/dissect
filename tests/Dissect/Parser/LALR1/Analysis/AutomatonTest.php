@@ -18,7 +18,7 @@ class AutomatonTest extends TestCase
     /**
      * @test
      */
-    public function addingATransitionShouldBeVisibleInTheTransitionTable()
+    public function addingATransitionShouldBeVisibleInTheTransitionTable(): void
     {
         $this->automaton->addTransition(0, 'a', 1);
         $table = $this->automaton->getTransitionTable();
@@ -29,7 +29,7 @@ class AutomatonTest extends TestCase
     /**
      * @test
      */
-    public function aNewStateShouldBeIdentifiedByItsNumber()
+    public function aNewStateShouldBeIdentifiedByItsNumber(): void
     {
         $state = new State(2, []);
         $this->automaton->addState($state);

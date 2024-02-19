@@ -14,7 +14,7 @@ class AnalyzerTest extends TestCase
     /**
      * @test
      */
-    public function automatonShouldBeCorrectlyBuilt()
+    public function automatonShouldBeCorrectlyBuilt(): void
     {
         $grammar = new Grammar();
 
@@ -37,7 +37,7 @@ class AnalyzerTest extends TestCase
     /**
      * @test
      */
-    public function lookaheadShouldBeCorrectlyPumped()
+    public function lookaheadShouldBeCorrectlyPumped(): void
     {
         $grammar = new Grammar();
 
@@ -94,7 +94,7 @@ class AnalyzerTest extends TestCase
     /**
      * @test
      */
-    public function parseTableShouldBeCorrectlyBuilt()
+    public function parseTableShouldBeCorrectlyBuilt(): void
     {
         $grammar = new Grammar();
 
@@ -135,7 +135,7 @@ class AnalyzerTest extends TestCase
     /**
      * @test
      */
-    public function unexpectedConflictsShouldThrowAnException()
+    public function unexpectedConflictsShouldThrowAnException(): void
     {
         $grammar = new Grammar();
 
@@ -165,7 +165,7 @@ class AnalyzerTest extends TestCase
     /**
      * @test
      */
-    public function expectedConflictsShouldBeRecorded()
+    public function expectedConflictsShouldBeRecorded(): void
     {
         $grammar = new Grammar();
 

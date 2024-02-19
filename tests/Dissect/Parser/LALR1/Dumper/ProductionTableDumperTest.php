@@ -10,7 +10,7 @@ class ProductionTableDumperTest extends TestCase
     /**
      * @test
      */
-    public function theWrittenTableShouldBeAsCompactAsPossible()
+    public function theWrittenTableShouldBeAsCompactAsPossible(): void
     {
         $grammar = new ExampleGrammar();
         $analyzer = new Analyzer();

@@ -10,7 +10,7 @@ class ItemTest extends TestCase
     /**
      * @test
      */
-    public function getActiveComponentShouldReturnTheComponentAboutToBeEncountered()
+    public function getActiveComponentShouldReturnTheComponentAboutToBeEncountered(): void
     {
         $item = new Item(new Rule(1, 'A', ['a', 'b', 'c']), 1);
 
@@ -20,7 +20,7 @@ class ItemTest extends TestCase
     /**
      * @test
      */
-    public function itemShouldBeAReduceItemIfAllComponentsHaveBeenEncountered()
+    public function itemShouldBeAReduceItemIfAllComponentsHaveBeenEncountered(): void
     {
         $item = new Item(new Rule(1, 'A', ['a', 'b', 'c']), 1);
         $this->assertFalse($item->isReduceItem());
@@ -32,7 +32,7 @@ class ItemTest extends TestCase
     /**
      * @test
      */
-    public function itemShouldPumpLookaheadIntoConnectedItems()
+    public function itemShouldPumpLookaheadIntoConnectedItems(): void
     {
         $item1 = new Item(new Rule(1, 'A', ['a', 'b', 'c']), 1);
         $item2 = new Item(new Rule(1, 'A', ['a', 'b', 'c']), 2);
@@ -46,7 +46,7 @@ class ItemTest extends TestCase
     /**
      * @test
      */
-    public function itemShouldPumpTheSameLookaheadOnlyOnce()
+    public function itemShouldPumpTheSameLookaheadOnlyOnce(): void
     {
         $item1 = new Item(new Rule(1, 'A', ['a', 'b', 'c']), 1);
 
@@ -71,7 +71,7 @@ class ItemTest extends TestCase
     /**
      * @test
      */
-    public function getUnrecognizedComponentsShouldReturnAllComponentAfterTheDottedOne()
+    public function getUnrecognizedComponentsShouldReturnAllComponentAfterTheDottedOne(): void
     {
         $item = new Item(new Rule(1, 'A', ['a', 'b', 'c']), 1);
 

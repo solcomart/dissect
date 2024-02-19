@@ -9,7 +9,7 @@ class RuleTest extends TestCase
     /**
      * @test
      */
-    public function getComponentShouldReturnNullIfAskedForComponentOutOfRange()
+    public function getComponentShouldReturnNullIfAskedForComponentOutOfRange(): void
     {
         $r = new Rule(1, 'Foo', ['x', 'y']);
         $this->assertEquals('y', $r->getComponent(1));

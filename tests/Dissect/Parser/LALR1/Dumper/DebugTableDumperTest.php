@@ -10,7 +10,7 @@ class DebugTableDumperTest extends TestCase
     /**
      * @test
      */
-    public function itDumpsAHumanReadableParseTableWithExplainingComments()
+    public function itDumpsAHumanReadableParseTableWithExplainingComments(): void
     {
         $grammar = new ExampleGrammar();
         $analyzer = new Analyzer();

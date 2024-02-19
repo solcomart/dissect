@@ -18,7 +18,7 @@ class AbstractLexerTest extends TestCase
     /**
      * @test
      */
-    public function lexShouldDelegateToExtractTokenUpdatingTheLineAndOffsetAccordingly()
+    public function lexShouldDelegateToExtractTokenUpdatingTheLineAndOffsetAccordingly(): void
     {
         $stream = $this->lexer->lex("ab\nc");
 
@@ -41,7 +41,7 @@ class AbstractLexerTest extends TestCase
     /**
      * @test
      */
-    public function lexShouldAppendAnEofTokenAutomatically()
+    public function lexShouldAppendAnEofTokenAutomatically(): void
     {
         $stream = $this->lexer->lex("abc");
         $stream->seek(3);
@@ -53,7 +53,7 @@ class AbstractLexerTest extends TestCase
     /**
      * @test
      */
-    public function lexShouldThrowAnExceptionOnAnUnrecognizableToken()
+    public function lexShouldThrowAnExceptionOnAnUnrecognizableToken(): void
     {
         try {
             $this->lexer->lex("abcd");
@@ -66,7 +66,7 @@ class AbstractLexerTest extends TestCase
     /**
      * @test
      */
-    public function lexShouldNormalizeLineEndingsBeforeLexing()
+    public function lexShouldNormalizeLineEndingsBeforeLexing(): void
     {
         $stream = $this->lexer->lex("a\r\nb");
         $this->assertEquals("\n", $stream->get(1)->getValue());
@@ -75,7 +75,7 @@ class AbstractLexerTest extends TestCase
     /**
      * @test
      */
-    public function lexShouldSkipTokensIfToldToDoSo()
+    public function lexShouldSkipTokensIfToldToDoSo(): void
     {
         $stream = $this->lexer->lex('aeb');
         $this->assertNotEquals('e', $stream->get(1)->getType());

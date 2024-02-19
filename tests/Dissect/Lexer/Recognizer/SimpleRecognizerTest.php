@@ -9,7 +9,7 @@ class SimpleRecognizerTest extends TestCase
     /**
      * @test
      */
-    public function recognizerShouldMatchAndPassTheValueByReference()
+    public function recognizerShouldMatchAndPassTheValueByReference(): void
     {
         $recognizer = new SimpleRecognizer('class');
         $result = $recognizer->match('class lorem ipsum', $value);
@@ -22,7 +22,7 @@ class SimpleRecognizerTest extends TestCase
     /**
      * @test
      */
-    public function recognizerShouldFailAndTheValueShouldStayNull()
+    public function recognizerShouldFailAndTheValueShouldStayNull(): void
     {
         $recognizer = new SimpleRecognizer('class');
         $result = $recognizer->match('lorem ipsum', $value);

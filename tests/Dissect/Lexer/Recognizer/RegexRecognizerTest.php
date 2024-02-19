@@ -9,7 +9,7 @@ class RegexRecognizerTest extends TestCase
     /**
      * @test
      */
-    public function recognizerShouldMatchAndPassTheValueByReference()
+    public function recognizerShouldMatchAndPassTheValueByReference(): void
     {
         $recognizer = new RegexRecognizer('/[a-z]+/');
         $result = $recognizer->match('lorem ipsum', $value);
@@ -22,7 +22,7 @@ class RegexRecognizerTest extends TestCase
     /**
      * @test
      */
-    public function recognizerShouldFailAndTheValueShouldStayNull()
+    public function recognizerShouldFailAndTheValueShouldStayNull(): void
     {
         $recognizer = new RegexRecognizer('/[a-z]+/');
         $result = $recognizer->match('123 456', $value);
@@ -34,7 +34,7 @@ class RegexRecognizerTest extends TestCase
     /**
      * @test
      */
-    public function recognizerShouldFailIfTheMatchIsNotAtTheBeginningOfTheString()
+    public function recognizerShouldFailIfTheMatchIsNotAtTheBeginningOfTheString(): void
     {
         $recognizer = new RegexRecognizer('/[a-z]+/');
         $result = $recognizer->match('234 class', $value);

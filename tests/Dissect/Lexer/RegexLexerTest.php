@@ -17,7 +17,7 @@ class RegexLexerTest extends TestCase
     /**
      * @test
      */
-    public function itShouldCallGetTypeToRetrieveTokenType()
+    public function itShouldCallGetTypeToRetrieveTokenType(): void
     {
         $stream = $this->lexer->lex('5 + 6');
 
@@ -30,7 +30,7 @@ class RegexLexerTest extends TestCase
     /**
      * @test
      */
-    public function itShouldTrackLineNumbers()
+    public function itShouldTrackLineNumbers(): void
     {
         $stream = $this->lexer->lex("5\n+\n\n5");
 

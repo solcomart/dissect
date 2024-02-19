@@ -9,7 +9,7 @@ class KernelSetTest extends TestCase
     /**
      * @test
      */
-    public function kernelsShouldBeProperlyHashedAndOrdered()
+    public function kernelsShouldBeProperlyHashedAndOrdered(): void
     {
         $this->assertEquals(array(1, 3, 6, 7), KernelSet::hashKernel(array(
             array(2, 1),
@@ -22,7 +22,7 @@ class KernelSetTest extends TestCase
     /**
      * @test
      */
-    public function insertShouldInsertANewNodeIfNoIdenticalKernelExists()
+    public function insertShouldInsertANewNodeIfNoIdenticalKernelExists(): void
     {
         $set = new KernelSet();
 

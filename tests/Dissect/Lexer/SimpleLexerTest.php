@@ -26,7 +26,7 @@ class SimpleLexerTest extends TestCase
     /**
      * @test
      */
-    public function simpleLexerShouldWalkThroughTheRecognizers()
+    public function simpleLexerShouldWalkThroughTheRecognizers(): void
     {
         $stream = $this->lexer->lex('a (b) c');
 
@@ -39,7 +39,7 @@ class SimpleLexerTest extends TestCase
     /**
      * @test
      */
-    public function simpleLexerShouldSkipSpecifiedTokens()
+    public function simpleLexerShouldSkipSpecifiedTokens(): void
     {
         $stream = $this->lexer->lex('a (b) c');
 
@@ -51,7 +51,7 @@ class SimpleLexerTest extends TestCase
     /**
      * @test
      */
-    public function simpleLexerShouldReturnTheBestMatch()
+    public function simpleLexerShouldReturnTheBestMatch(): void
     {
         $this->lexer->token('CLASS', 'class');
         $this->lexer->regex('WORD', '/[a-z]+/');

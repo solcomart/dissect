@@ -19,7 +19,7 @@ class ParserTest extends TestCase
     /**
      * @test
      */
-    public function parserShouldProcessTheTokenStreamAndUseGrammarCallbacksForReductions()
+    public function parserShouldProcessTheTokenStreamAndUseGrammarCallbacksForReductions(): void
     {
         $this->assertEquals(-2, $this->parser->parse($this->lexer->lex(
             '-1 - 1')));
@@ -37,7 +37,7 @@ class ParserTest extends TestCase
     /**
      * @test
      */
-    public function parserShouldThrowAnExceptionOnInvalidInput()
+    public function parserShouldThrowAnExceptionOnInvalidInput(): void
     {
         try {
             $this->parser->parse($this->lexer->lex('6 ** 5 3'));

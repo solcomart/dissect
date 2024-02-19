@@ -19,7 +19,7 @@ class AutomatonDumperTest extends TestCase
     /**
      * @test
      */
-    public function dumpDumpsTheEntireAutomaton()
+    public function dumpDumpsTheEntireAutomaton(): void
     {
         $this->assertStringEqualsFile(
             __DIR__ . '/res/graphviz/automaton.dot',
@@ -30,7 +30,7 @@ class AutomatonDumperTest extends TestCase
     /**
      * @test
      */
-    public function dumpStateDumpsOnlyTheSpecifiedStateAndTransitions()
+    public function dumpStateDumpsOnlyTheSpecifiedStateAndTransitions(): void
     {
         $this->assertStringEqualsFile(
             __DIR__ . '/res/graphviz/state.dot',
