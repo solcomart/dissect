@@ -9,6 +9,7 @@ use Rector\DeadCode\Rector\Property\RemoveUselessVarTagRector;
 use Rector\Php71\Rector\ClassConst\PublicConstantVisibilityRector;
 use Rector\Php74\Rector\Closure\ClosureToArrowFunctionRector;
 use Rector\TypeDeclaration\Rector\Class_\AddTestsVoidReturnTypeWhereNoReturnRector;
+use Rector\TypeDeclaration\Rector\ClassMethod\AddVoidReturnTypeWhereNoReturnRector;
 
 return RectorConfig::configure()
     ->withPaths([
@@ -24,6 +25,6 @@ return RectorConfig::configure()
         RemoveUselessVarTagRector::class,
         PublicConstantVisibilityRector::class,
         ClosureToArrowFunctionRector::class,
-        //AddVoidReturnTypeWhereNoReturnRector::class,
+        AddVoidReturnTypeWhereNoReturnRector::class,
         AddTestsVoidReturnTypeWhereNoReturnRector::class
     ]);

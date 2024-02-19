@@ -59,7 +59,7 @@ class CommonNode implements Node
     /**
      * {@inheritDoc}
      */
-    public function setNode(string $name, Node $child)
+    public function setNode(string $name, Node $child): void
     {
         $this->children[$name] = $child;
     }
@@ -67,7 +67,7 @@ class CommonNode implements Node
     /**
      * {@inheritDoc}
      */
-    public function removeNode(string $name)
+    public function removeNode(string $name): void
     {
         unset($this->children[$name]);
     }
@@ -103,7 +103,7 @@ class CommonNode implements Node
     /**
      * {@inheritDoc}
      */
-    public function setAttribute(string $key, mixed $value)
+    public function setAttribute(string $key, mixed $value): void
     {
         $this->attributes[$key] = $value;
     }
@@ -111,7 +111,7 @@ class CommonNode implements Node
     /**
      * {@inheritDoc}
      */
-    public function removeAttribute(string $key)
+    public function removeAttribute(string $key): void
     {
         unset($this->attributes[$key]);
     }
