@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dissect\Parser\Exception;
 
 use Dissect\Lexer\Token;

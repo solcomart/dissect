@@ -10,6 +10,7 @@ use Rector\Php71\Rector\ClassConst\PublicConstantVisibilityRector;
 use Rector\Php74\Rector\Closure\ClosureToArrowFunctionRector;
 use Rector\TypeDeclaration\Rector\Class_\AddTestsVoidReturnTypeWhereNoReturnRector;
 use Rector\TypeDeclaration\Rector\ClassMethod\AddVoidReturnTypeWhereNoReturnRector;
+use Rector\TypeDeclaration\Rector\StmtsAwareInterface\DeclareStrictTypesRector;
 
 return RectorConfig::configure()
     ->withPaths([
@@ -26,5 +27,6 @@ return RectorConfig::configure()
         PublicConstantVisibilityRector::class,
         ClosureToArrowFunctionRector::class,
         AddVoidReturnTypeWhereNoReturnRector::class,
-        AddTestsVoidReturnTypeWhereNoReturnRector::class
+        AddTestsVoidReturnTypeWhereNoReturnRector::class,
+        DeclareStrictTypesRector::class,
     ]);

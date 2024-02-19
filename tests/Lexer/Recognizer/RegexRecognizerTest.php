@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dissect\Lexer\Recognizer;
 
 use PHPUnit\Framework\TestCase;

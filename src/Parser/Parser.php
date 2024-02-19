@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dissect\Parser;
 
 use Dissect\Lexer\TokenStream\TokenStream;

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dissect\Console;
 
 use Symfony\Component\Console\Application as BaseApplication;

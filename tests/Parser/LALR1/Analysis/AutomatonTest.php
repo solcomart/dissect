@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dissect\Parser\LALR1\Analysis;
 
 use PHPUnit\Framework\TestCase;

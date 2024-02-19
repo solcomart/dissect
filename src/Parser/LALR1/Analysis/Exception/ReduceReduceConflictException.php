@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dissect\Parser\LALR1\Analysis\Exception;
 
 use Dissect\Parser\LALR1\Analysis\Automaton;

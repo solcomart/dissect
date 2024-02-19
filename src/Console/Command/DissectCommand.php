@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dissect\Console\Command;
 
 use Dissect\Parser\LALR1\Analysis\Exception\ConflictException;
