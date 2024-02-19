@@ -23,7 +23,7 @@ class AutomatonTest extends TestCase
         $this->automaton->addTransition(0, 'a', 1);
         $table = $this->automaton->getTransitionTable();
 
-        $this->assertEquals(1, $table[0]['a']);
+        $this->assertSame(1, $table[0]['a']);
     }
 
     #[\PHPUnit\Framework\Attributes\Test]

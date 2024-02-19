@@ -12,6 +12,7 @@ use Dissect\Parser\Grammar;
  * parser.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Parser\LALR1\Dumper\DebugTableDumperTest
  */
 class DebugTableDumper implements TableDumper
 {

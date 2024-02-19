@@ -14,6 +14,7 @@ use LogicException;
  * but internally keeps notion of current lexer state.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Lexer\StatefulLexerTest
  */
 class StatefulLexer extends AbstractLexer
 {

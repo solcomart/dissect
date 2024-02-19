@@ -15,6 +15,7 @@ use Dissect\Parser\Parser;
  * @author Jonathan Wage <jonwage@gmail.com>
  * @author Roman Borschel <roman@code-factory.org>
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Lexer\RegexLexerTest
  */
 abstract class RegexLexer implements Lexer
 {

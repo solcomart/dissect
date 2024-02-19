@@ -8,6 +8,7 @@ namespace Dissect\Parser\LALR1\Analysis;
  * A state in a handle-finding FSA.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Parser\LALR1\Analysis\StateTest
  */
 class State
 {

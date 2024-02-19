@@ -13,6 +13,7 @@ use Dissect\Parser\LALR1\Analysis\State;
  * format used by Graphviz.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Parser\LALR1\Dumper\AutomatonDumperTest
  */
 class AutomatonDumper
 {

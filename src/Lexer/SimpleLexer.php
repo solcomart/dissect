@@ -13,6 +13,7 @@ use Dissect\Util\Util;
  * without keeping track of state.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Lexer\SimpleLexerTest
  */
 class SimpleLexer extends AbstractLexer
 {

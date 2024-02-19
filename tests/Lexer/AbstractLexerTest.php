@@ -22,20 +22,20 @@ class AbstractLexerTest extends TestCase
     {
         $stream = $this->lexer->lex("ab\nc");
 
-        $this->assertEquals('a', $stream->getCurrentToken()->getValue());
-        $this->assertEquals(1, $stream->getCurrentToken()->getLine());
+        $this->assertSame('a', $stream->getCurrentToken()->getValue());
+        $this->assertSame(1, $stream->getCurrentToken()->getLine());
         $stream->next();
 
-        $this->assertEquals('b', $stream->getCurrentToken()->getValue());
-        $this->assertEquals(1, $stream->getCurrentToken()->getLine());
+        $this->assertSame('b', $stream->getCurrentToken()->getValue());
+        $this->assertSame(1, $stream->getCurrentToken()->getLine());
         $stream->next();
 
-        $this->assertEquals("\n", $stream->getCurrentToken()->getValue());
-        $this->assertEquals(1, $stream->getCurrentToken()->getLine());
+        $this->assertSame("\n", $stream->getCurrentToken()->getValue());
+        $this->assertSame(1, $stream->getCurrentToken()->getLine());
         $stream->next();
 
-        $this->assertEquals('c', $stream->getCurrentToken()->getValue());
-        $this->assertEquals(2, $stream->getCurrentToken()->getLine());
+        $this->assertSame('c', $stream->getCurrentToken()->getValue());
+        $this->assertSame(2, $stream->getCurrentToken()->getLine());
     }
 
     #[\PHPUnit\Framework\Attributes\Test]
@@ -44,8 +44,8 @@ class AbstractLexerTest extends TestCase
         $stream = $this->lexer->lex("abc");
         $stream->seek(3);
 
-        $this->assertEquals(Parser::EOF_TOKEN_TYPE, $stream->getCurrentToken()->getType());
-        $this->assertEquals(1, $stream->getCurrentToken()->getLine());
+        $this->assertSame(Parser::EOF_TOKEN_TYPE, $stream->getCurrentToken()->getType());
+        $this->assertSame(1, $stream->getCurrentToken()->getLine());
     }
 
     #[\PHPUnit\Framework\Attributes\Test]
@@ -55,7 +55,7 @@ class AbstractLexerTest extends TestCase
             $this->lexer->lex("abcd");
             $this->fail('Expected a RecognitionException.');
         } catch (RecognitionException $e) {
-            $this->assertEquals(1, $e->getSourceLine());
+            $this->assertSame(1, $e->getSourceLine());
         }
     }
 
@@ -63,13 +63,13 @@ class AbstractLexerTest extends TestCase
     public function lexShouldNormalizeLineEndingsBeforeLexing(): void
     {
         $stream = $this->lexer->lex("a\r\nb");
-        $this->assertEquals("\n", $stream->get(1)->getValue());
+        $this->assertSame("\n", $stream->get(1)->getValue());
     }
 
     #[\PHPUnit\Framework\Attributes\Test]
     public function lexShouldSkipTokensIfToldToDoSo(): void
     {
         $stream = $this->lexer->lex('aeb');
-        $this->assertNotEquals('e', $stream->get(1)->getType());
+        $this->assertNotSame('e', $stream->get(1)->getType());
     }
 }

@@ -32,5 +32,6 @@ return RectorConfig::configure()
         // DeclareStrictTypesRector::class,
     ])
     ->withSets([
-        PHPUnitSetList::ANNOTATIONS_TO_ATTRIBUTES
+        PHPUnitSetList::ANNOTATIONS_TO_ATTRIBUTES,
+        PHPUnitSetList::PHPUNIT_CODE_QUALITY,
     ]);

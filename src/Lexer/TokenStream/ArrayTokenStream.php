@@ -12,6 +12,7 @@ use OutOfBoundsException;
  * A simple array based implementation of a token stream.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Lexer\TokenStream\ArrayTokenStreamTest
  */
 class ArrayTokenStream implements TokenStream
 {

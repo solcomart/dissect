@@ -9,6 +9,7 @@ namespace Dissect\Lexer\Recognizer;
  * strpos match.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Lexer\Recognizer\SimpleRecognizerTest
  */
 class SimpleRecognizer implements Recognizer
 {

@@ -14,6 +14,7 @@ use Dissect\Parser as P;
  * A LR parser.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Parser\LALR1\ParserTest
  */
 class Parser implements P\Parser
 {

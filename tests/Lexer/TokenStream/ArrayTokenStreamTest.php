@@ -26,7 +26,7 @@ class ArrayTokenStreamTest extends TestCase
     #[\PHPUnit\Framework\Attributes\Test]
     public function theCursorShouldBeOnFirstTokenByDefault(): void
     {
-        $this->assertEquals('6', $this->stream->getCurrentToken()->getValue());
+        $this->assertSame('6', $this->stream->getCurrentToken()->getValue());
     }
 
     #[\PHPUnit\Framework\Attributes\Test]
@@ -35,13 +35,13 @@ class ArrayTokenStreamTest extends TestCase
         $this->stream->seek(2);
         $this->stream->next();
 
-        $this->assertEquals(3, $this->stream->getPosition());
+        $this->assertSame(3, $this->stream->getPosition());
     }
 
     #[\PHPUnit\Framework\Attributes\Test]
     public function lookAheadShouldReturnTheCorrectToken(): void
     {
-        $this->assertEquals('5', $this->stream->lookAhead(2)->getValue());
+        $this->assertSame('5', $this->stream->lookAhead(2)->getValue());
     }
 
     #[\PHPUnit\Framework\Attributes\Test]
@@ -54,7 +54,7 @@ class ArrayTokenStreamTest extends TestCase
     #[\PHPUnit\Framework\Attributes\Test]
     public function getShouldReturnATokenByAbsolutePosition(): void
     {
-        $this->assertEquals('3', $this->stream->get(4)->getValue());
+        $this->assertSame('3', $this->stream->get(4)->getValue());
     }
 
     #[\PHPUnit\Framework\Attributes\Test]
@@ -68,7 +68,7 @@ class ArrayTokenStreamTest extends TestCase
     public function moveShouldMoveTheCursorByToAnAbsolutePosition(): void
     {
         $this->stream->move(2);
-        $this->assertEquals('5', $this->stream->getCurrentToken()->getValue());
+        $this->assertSame('5', $this->stream->getCurrentToken()->getValue());
     }
 
     #[\PHPUnit\Framework\Attributes\Test]
@@ -82,7 +82,7 @@ class ArrayTokenStreamTest extends TestCase
     public function seekShouldMoveTheCursorByRelativeOffset(): void
     {
         $this->stream->seek(4);
-        $this->assertEquals('3', $this->stream->getCurrentToken()->getValue());
+        $this->assertSame('3', $this->stream->getCurrentToken()->getValue());
     }
 
     #[\PHPUnit\Framework\Attributes\Test]
@@ -96,10 +96,10 @@ class ArrayTokenStreamTest extends TestCase
     public function nextShouldMoveTheCursorOneTokenAhead(): void
     {
         $this->stream->next();
-        $this->assertEquals('PLUS', $this->stream->getCurrentToken()->getType());
+        $this->assertSame('PLUS', $this->stream->getCurrentToken()->getType());
 
         $this->stream->next();
-        $this->assertEquals('5', $this->stream->getCurrentToken()->getValue());
+        $this->assertSame('5', $this->stream->getCurrentToken()->getValue());
     }
 
     #[\PHPUnit\Framework\Attributes\Test]

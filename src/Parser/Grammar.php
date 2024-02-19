@@ -10,6 +10,7 @@ use LogicException;
  * Represents a context-free grammar.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Parser\GrammarTest
  */
 class Grammar
 {

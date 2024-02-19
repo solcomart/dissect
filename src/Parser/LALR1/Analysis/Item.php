@@ -29,6 +29,7 @@ use Dissect\Parser\Rule;
  * can be reduced.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Parser\LALR1\Analysis\ItemTest
  */
 class Item
 {

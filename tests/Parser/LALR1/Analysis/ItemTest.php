@@ -14,7 +14,7 @@ class ItemTest extends TestCase
     {
         $item = new Item(new Rule(1, 'A', ['a', 'b', 'c']), 1);
 
-        $this->assertEquals('b', $item->getActiveComponent());
+        $this->assertSame('b', $item->getActiveComponent());
     }
 
     #[\PHPUnit\Framework\Attributes\Test]
@@ -54,7 +54,7 @@ class ItemTest extends TestCase
 
         $item2->expects($this->once())
             ->method('pump')
-            ->with($this->equalTo('d'));
+            ->with('d');
 
         $item1->connect($item2);
 
@@ -67,6 +67,6 @@ class ItemTest extends TestCase
     {
         $item = new Item(new Rule(1, 'A', ['a', 'b', 'c']), 1);
 
-        $this->assertEquals(['c'], $item->getUnrecognizedComponents());
+        $this->assertSame(['c'], $item->getUnrecognizedComponents());
     }
 }

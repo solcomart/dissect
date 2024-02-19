@@ -20,19 +20,19 @@ class GrammarTest extends TestCase
     {
         $rules = $this->grammar->getRules();
 
-        $this->assertEquals('Foo', $rules[1]->getName());
-        $this->assertEquals('Foo', $rules[2]->getName());
+        $this->assertSame('Foo', $rules[1]->getName());
+        $this->assertSame('Foo', $rules[2]->getName());
     }
 
     #[\PHPUnit\Framework\Attributes\Test]
     public function theGrammarShouldBeAugmentedWithAStartRule(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             Grammar::START_RULE_NAME,
             $this->grammar->getStartRule()->getName()
         );
 
-        $this->assertEquals(
+        $this->assertSame(
             array('Foo'),
             $this->grammar->getStartRule()->getComponents()
         );

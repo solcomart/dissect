@@ -9,6 +9,7 @@ namespace Dissect\Lexer\Recognizer;
  * regular expression.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Lexer\Recognizer\RegexRecognizerTest
  */
 class RegexRecognizer implements Recognizer
 {

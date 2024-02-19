@@ -9,6 +9,7 @@ namespace Dissect\Parser\LALR1\Analysis;
  * grammar productions.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Parser\LALR1\Analysis\AutomatonTest
  */
 class Automaton
 {

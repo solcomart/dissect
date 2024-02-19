@@ -11,6 +11,7 @@ namespace Dissect\Parser\LALR1\Dumper;
  * without any comments.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Parser\LALR1\Dumper\ProductionTableDumperTest
  */
 class ProductionTableDumper implements TableDumper
 {

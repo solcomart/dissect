@@ -30,10 +30,10 @@ class SimpleLexerTest extends TestCase
     {
         $stream = $this->lexer->lex('a (b) c');
 
-        $this->assertEquals(6, $stream->count()); // with EOF
-        $this->assertEquals('(', $stream->get(1)->getType());
-        $this->assertEquals(1, $stream->get(3)->getLine());
-        $this->assertEquals('C', $stream->get(4)->getType());
+        $this->assertSame(6, $stream->count()); // with EOF
+        $this->assertSame('(', $stream->get(1)->getType());
+        $this->assertSame(1, $stream->get(3)->getLine());
+        $this->assertSame('C', $stream->get(4)->getType());
     }
 
     #[\PHPUnit\Framework\Attributes\Test]
@@ -42,7 +42,7 @@ class SimpleLexerTest extends TestCase
         $stream = $this->lexer->lex('a (b) c');
 
         foreach ($stream as $token) {
-            $this->assertNotEquals('WS', $token->getType());
+            $this->assertNotSame('WS', $token->getType());
         }
     }
 
@@ -54,7 +54,7 @@ class SimpleLexerTest extends TestCase
 
         $stream = $this->lexer->lex('class classloremipsum');
 
-        $this->assertEquals('CLASS', $stream->getCurrentToken()->getType());
-        $this->assertEquals('WORD', $stream->lookAhead(1)->getType());
+        $this->assertSame('CLASS', $stream->getCurrentToken()->getType());
+        $this->assertSame('WORD', $stream->lookAhead(1)->getType());
     }
 }

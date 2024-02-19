@@ -16,7 +16,7 @@ class SimpleRecognizerTest extends TestCase
 
         $this->assertTrue($result);
         $this->assertNotNull($value);
-        $this->assertEquals('class', $value);
+        $this->assertSame('class', $value);
     }
 
     #[\PHPUnit\Framework\Attributes\Test]

@@ -16,6 +16,7 @@ use Dissect\Util\Util;
  * SimpleLexer and StatefulLexer extend this class.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Lexer\AbstractLexerTest
  */
 abstract class AbstractLexer implements Lexer
 {

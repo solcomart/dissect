@@ -8,6 +8,7 @@ namespace Dissect\Parser;
  * Represents a rule in a context-free grammar.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Parser\RuleTest
  */
 class Rule
 {

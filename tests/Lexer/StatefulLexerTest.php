@@ -52,9 +52,9 @@ class StatefulLexerTest extends TestCase
         $stream = $this->lexer->lex('foo bar "long \\" string" baz quux');
 
         $this->assertCount(8, $stream);
-        $this->assertEquals('STRING_CONTENTS', $stream->get(3)->getType());
-        $this->assertEquals('long \\" string', $stream->get(3)->getValue());
-        $this->assertEquals('quux', $stream->get(6)->getValue());
+        $this->assertSame('STRING_CONTENTS', $stream->get(3)->getType());
+        $this->assertSame('long \\" string', $stream->get(3)->getValue());
+        $this->assertSame('quux', $stream->get(6)->getValue());
     }
 
     #[\PHPUnit\Framework\Attributes\Test]
@@ -70,6 +70,6 @@ class StatefulLexerTest extends TestCase
         $this->lexer->start('root');
 
         $stream = $this->lexer->lex('foo bar');
-        $this->assertEquals(3, $stream->count());
+        $this->assertSame(3, $stream->count());
     }
 }

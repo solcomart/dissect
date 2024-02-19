@@ -16,7 +16,7 @@ class RegexRecognizerTest extends TestCase
 
         $this->assertTrue($result);
         $this->assertNotNull($value);
-        $this->assertEquals('lorem', $value);
+        $this->assertSame('lorem', $value);
     }
 
     #[\PHPUnit\Framework\Attributes\Test]

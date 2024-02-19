@@ -17,6 +17,7 @@ use SplQueue;
  * the result.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Parser\LALR1\Analysis\AnalyzerTest
  */
 class Analyzer
 {

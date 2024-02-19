@@ -9,6 +9,7 @@ namespace Dissect\Parser\LALR1\Analysis\KernelSet;
  * of states by their kernel items.
  *
  * @author Jakub Lédl <jakubledl@gmail.com>
+ * @see \Dissect\Parser\LALR1\Analysis\KernelSet\KernelSetTest
  */
 class KernelSet
 {
