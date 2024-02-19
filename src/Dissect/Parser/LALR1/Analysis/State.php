@@ -57,8 +57,6 @@ class State
 
     /**
      * Returns the number identifying this state.
-     *
-     * @return int
      */
     public function getNumber(): int
     {

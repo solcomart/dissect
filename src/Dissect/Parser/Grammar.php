@@ -240,8 +240,6 @@ class Grammar
      * Does a nonterminal $name exist in the grammar?
      *
      * @param string $name The name of the nonterminal.
-     *
-     * @return boolean
      */
     public function hasNonterminal(string $name): bool
     {
@@ -351,8 +349,6 @@ class Grammar
      * Is the passed token an operator?
      *
      * @param string $token The token type.
-     *
-     * @return boolean
      */
     public function hasOperator(string $token): bool
     {

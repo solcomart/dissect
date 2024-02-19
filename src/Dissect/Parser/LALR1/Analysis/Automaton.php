@@ -52,8 +52,6 @@ class Automaton
      * Does this automaton have a state identified by $number?
      *
      * @param $number
-     *
-     * @return boolean
      */
     public function hasState($number): bool
     {

@@ -57,15 +57,11 @@ abstract class RegexLexer implements Lexer
 
     /**
      * The patterns corresponding to tokens.
-     *
-     * @return array
      */
     abstract protected function getCatchablePatterns(): array;
 
     /**
      * The patterns corresponding to tokens to be skipped.
-     *
-     * @return array
      */
     abstract protected function getNonCatchablePatterns(): array;
 

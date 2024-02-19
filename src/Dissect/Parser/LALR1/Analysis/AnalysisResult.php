@@ -32,8 +32,6 @@ class AnalysisResult
 
     /**
      * Returns the handle-finding FSA.
-     *
-     * @return Automaton
      */
     public function getAutomaton(): Automaton
     {

@@ -106,17 +106,11 @@ class ArrayTokenStream implements TokenStream
         $this->position++;
     }
 
-    /**
-     * @return int
-     */
     public function count(): int
     {
         return count($this->tokens);
     }
 
-    /**
-     * @return ArrayIterator
-     */
     public function getIterator(): ArrayIterator
     {
         return new ArrayIterator($this->tokens);
