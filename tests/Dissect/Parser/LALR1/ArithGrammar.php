@@ -11,44 +11,28 @@ class ArithGrammar extends Grammar
     {
         $this('Expr')
             ->is('Expr', '+', 'Expr')
-            ->call(function ($l, $_, $r) {
-                return $l + $r;
-            })
+            ->call(fn($l, $_, $r) => $l + $r)
 
             ->is('Expr', '-', 'Expr')
-            ->call(function ($l, $_, $r) {
-                return $l - $r;
-            })
+            ->call(fn($l, $_, $r) => $l - $r)
 
             ->is('Expr', '*', 'Expr')
-            ->call(function ($l, $_, $r) {
-                return $l * $r;
-            })
+            ->call(fn($l, $_, $r) => $l * $r)
 
             ->is('Expr', '/', 'Expr')
-            ->call(function ($l, $_, $r) {
-                return $l / $r;
-            })
+            ->call(fn($l, $_, $r) => $l / $r)
 
             ->is('Expr', '**', 'Expr')
-            ->call(function ($l, $_, $r) {
-                return pow($l, $r);
-            })
+            ->call(fn($l, $_, $r) => pow($l, $r))
 
             ->is('(', 'Expr', ')')
-            ->call(function ($r, $e, $_) {
-                return $e;
-            })
+            ->call(fn($r, $e, $_) => $e)
 
             ->is('-', 'Expr')->prec(4)
-            ->call(function ($_, $e) {
-                return -$e;
-            })
+            ->call(fn($_, $e) => -$e)
 
             ->is('INT')
-            ->call(function ($i) {
-                return (int)$i->getValue();
-            });
+            ->call(fn($i) => (int)$i->getValue());
 
         $this->operators('+', '-')->left()->prec(1);
         $this->operators('*', '/')->left()->prec(2);
