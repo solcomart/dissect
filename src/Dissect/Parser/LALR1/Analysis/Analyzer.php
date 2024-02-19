@@ -240,8 +240,6 @@ class Analyzer
     /**
      * Encodes the handle-finding FSA as a LR parse table.
      *
-     * @param Automaton $automaton
-     * @param Grammar $grammar
      *
      * @return array The parse table.
      */

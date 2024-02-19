@@ -18,8 +18,6 @@ class AutomatonDumper
 
     /**
      * Constructor.
-     *
-     * @param Automaton $automaton
      */
     public function __construct(Automaton $automaton)
     {

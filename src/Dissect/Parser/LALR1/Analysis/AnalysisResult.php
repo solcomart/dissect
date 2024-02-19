@@ -19,7 +19,6 @@ class AnalysisResult
      * Constructor.
      *
      * @param array $parseTable The parse table.
-     * @param Automaton $automaton
      * @param array $conflicts An array of conflicts resolved during parse table
      * construction.
      */
