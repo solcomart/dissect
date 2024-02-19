@@ -15,12 +15,12 @@ class CommonToken implements Token
      * Constructor.
      *
      * @param mixed $type The type of the token.
-     * @param string $value The token value.
+     * @param int|string $value The token value.
      * @param int $line The line.
      */
     public function __construct(
         protected mixed $type,
-        protected string $value,
+        protected int|string $value,
         protected int $line
     ) {}
 
@@ -35,7 +35,7 @@ class CommonToken implements Token
     /**
      * {@inheritDoc}
      */
-    public function getValue(): string
+    public function getValue(): int|string
     {
         return $this->value;
     }

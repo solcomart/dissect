@@ -19,7 +19,7 @@ interface Token
     /**
      * Returns the token value.
      */
-    public function getValue(): string;
+    public function getValue(): int|string;
 
     /**
      * Returns the line on which the token was found.
