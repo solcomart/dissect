@@ -16,7 +16,7 @@ class ShiftReduceConflictException extends ConflictException
     /**
      * The exception message template.
      */
-    const MESSAGE = <<<EOT
+    public const MESSAGE = <<<EOT
 The grammar exhibits a shift/reduce conflict on rule:
 
   %d. %s -> %s

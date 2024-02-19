@@ -16,7 +16,7 @@ class ReduceReduceConflictException extends ConflictException
     /**
      * The exception message template.
      */
-    const MESSAGE = <<<EOT
+    public const MESSAGE = <<<EOT
 The grammar exhibits a reduce/reduce conflict on rules:
 
   %d. %s -> %s

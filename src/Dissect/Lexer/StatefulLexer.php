@@ -23,13 +23,13 @@ class StatefulLexer extends AbstractLexer
     /**
      * Signifies that no action should be taken on encountering a token.
      */
-    const NO_ACTION = 0;
+    public const NO_ACTION = 0;
 
     /**
      * Indicates that a state should be popped of the state stack on
      * encountering a token.
      */
-    const POP_STATE = 1;
+    public const POP_STATE = 1;
 
     /**
      * Adds a new token definition. If given only one argument,

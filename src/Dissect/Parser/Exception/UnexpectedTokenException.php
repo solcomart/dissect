@@ -12,7 +12,7 @@ use RuntimeException;
  */
 class UnexpectedTokenException extends RuntimeException
 {
-    const MESSAGE = <<<EOT
+    public const MESSAGE = <<<EOT
 Unexpected %s at line %d.
 
 Expected one of %s.

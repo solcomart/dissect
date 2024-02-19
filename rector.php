@@ -6,6 +6,7 @@ use Rector\Config\RectorConfig;
 use Rector\DeadCode\Rector\ClassMethod\RemoveUselessParamTagRector;
 use Rector\DeadCode\Rector\ClassMethod\RemoveUselessReturnTagRector;
 use Rector\DeadCode\Rector\Property\RemoveUselessVarTagRector;
+use Rector\Php71\Rector\ClassConst\PublicConstantVisibilityRector;
 
 return RectorConfig::configure()
     ->withPaths([
@@ -19,5 +20,6 @@ return RectorConfig::configure()
         RemoveUselessParamTagRector::class,
         RemoveUselessReturnTagRector::class,
         RemoveUselessVarTagRector::class,
+        PublicConstantVisibilityRector::class,
         //AddVoidReturnTypeWhereNoReturnRector::class,
     ]);

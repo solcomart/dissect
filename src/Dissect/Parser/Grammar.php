@@ -15,12 +15,12 @@ class Grammar
      * The name given to the rule the grammar is augmented with
      * when start() is called.
      */
-    const START_RULE_NAME = '$start';
+    public const START_RULE_NAME = '$start';
 
     /**
      * The epsilon symbol signifies an empty production.
      */
-    const EPSILON = '$epsilon';
+    public const EPSILON = '$epsilon';
 
     /**
      * @var Rule[]
@@ -50,20 +50,20 @@ class Grammar
      * Signifies that the parser should not resolve any
      * grammar conflicts.
      */
-    const NONE = 0;
+    public const NONE = 0;
 
     /**
      * Signifies that the parser should resolve
      * shift/reduce conflicts by always shifting.
      */
-    const SHIFT = 1;
+    public const SHIFT = 1;
 
     /**
      * Signifies that the parser should resolve
      * reduce/reduce conflicts by reducing with
      * the longer rule.
      */
-    const LONGER_REDUCE = 2;
+    public const LONGER_REDUCE = 2;
 
     /**
      * Signifies that the parser should resolve
@@ -71,35 +71,35 @@ class Grammar
      * with the rule that was given earlier in
      * the grammar.
      */
-    const EARLIER_REDUCE = 4;
+    public const EARLIER_REDUCE = 4;
 
     /**
      * Signifies that the conflicts should be
      * resolved by taking operator precendence
      * into account.
      */
-    const OPERATORS = 8;
+    public const OPERATORS = 8;
 
     /**
      * Signifies that the parser should automatically
      * resolve all grammar conflicts.
      */
-    const ALL = 15;
+    public const ALL = 15;
 
     /**
      * Left operator associativity.
      */
-    const LEFT = 0;
+    public const LEFT = 0;
 
     /**
      * Right operator associativity.
      */
-    const RIGHT = 1;
+    public const RIGHT = 1;
 
     /**
      * The operator is nonassociative.
      */
-    const NONASSOC = 2;
+    public const NONASSOC = 2;
 
     public function __invoke(string $nonterminal): static
     {
