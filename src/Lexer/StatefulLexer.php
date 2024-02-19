@@ -40,8 +40,6 @@ class StatefulLexer extends AbstractLexer
      *
      * @param string $type The token type.
      * @param string|null $value The value to be recognized.
-     *
-     * @return StatefulLexer This instance for fluent interface.
      */
     public function token(string $type, string $value = null): StatefulLexer
     {
@@ -68,8 +66,6 @@ class StatefulLexer extends AbstractLexer
      *
      * @param string $type The token type.
      * @param string $regex The regular expression used to match the token.
-     *
-     * @return SimpleLexer This instance for fluent interface.
      */
     public function regex(string $type, string $regex): AbstractLexer
     {
@@ -91,8 +87,6 @@ class StatefulLexer extends AbstractLexer
      * Marks the token types given as arguments to be skipped.
      *
      * @param mixed $types Unlimited number of token types.
-     *
-     * @return StatefulLexer This instance for fluent interface.
      */
     public function skip(mixed ...$types): StatefulLexer
     {
@@ -109,8 +103,6 @@ class StatefulLexer extends AbstractLexer
      * Registers a new lexer state.
      *
      * @param string $state The new state name.
-     *
-     * @return StatefulLexer This instance for fluent interface.
      */
     public function state(string $state): StatefulLexer
     {
@@ -129,8 +121,6 @@ class StatefulLexer extends AbstractLexer
      * Sets the starting state for the lexer.
      *
      * @param string $state The name of the starting state.
-     *
-     * @return StatefulLexer This instance for fluent interface.
      */
     public function start(string $state): StatefulLexer
     {
@@ -143,8 +133,6 @@ class StatefulLexer extends AbstractLexer
      * Sets an action for the token type that is currently being built.
      *
      * @param mixed $action The action to take.
-     *
-     * @return StatefulLexer This instance for fluent interface.
      */
     public function action(mixed $action): StatefulLexer
     {

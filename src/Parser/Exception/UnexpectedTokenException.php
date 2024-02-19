@@ -15,10 +15,10 @@ use RuntimeException;
 class UnexpectedTokenException extends RuntimeException
 {
     public const MESSAGE = <<<EOT
-Unexpected %s at line %d.
+    Unexpected %s at line %d.
 
-Expected one of %s.
-EOT;
+    Expected one of %s.
+    EOT;
 
     protected Token $token;
 
@@ -54,8 +54,6 @@ EOT;
 
     /**
      * Returns the unexpected token.
-     *
-     * @return Token The unexpected token.
      */
     public function getToken(): Token
     {

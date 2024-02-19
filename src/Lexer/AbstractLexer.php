@@ -6,6 +6,7 @@ namespace Dissect\Lexer;
 
 use Dissect\Lexer\Exception\RecognitionException;
 use Dissect\Lexer\TokenStream\ArrayTokenStream;
+use Dissect\Lexer\TokenStream\TokenStream;
 use Dissect\Parser\Parser;
 use Dissect\Util\Util;
 
@@ -22,8 +23,6 @@ abstract class AbstractLexer implements Lexer
 
     /**
      * Returns the current line.
-     *
-     * @return int The current line.
      */
     protected function getCurrentLine(): int
     {
@@ -35,24 +34,18 @@ abstract class AbstractLexer implements Lexer
      * Returns the token on success or null on failure.
      *
      * @param string $string The string to extract the token from.
-     *
-     * @return Token|null The extracted token or null.
      */
     abstract protected function extractToken(string $string): ?Token;
 
     /**
      * Should given token be skipped?
-     *
-     * @param Token $token The token to evaluate.
-     *
-     * @return boolean Whether to skip the token.
      */
     abstract protected function shouldSkipToken(Token $token): bool;
 
     /**
      * {@inheritDoc}
      */
-    public function lex(string $string): TokenStream\TokenStream|ArrayTokenStream
+    public function lex(string $string): TokenStream
     {
         // normalize line endings
         $string = strtr($string, ["\r\n" => "\n", "\r" => "\n"]);

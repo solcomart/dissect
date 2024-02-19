@@ -69,9 +69,6 @@ abstract class RegexLexer implements Lexer
 
     /**
      * Retrieves the token type.
-     *
-     *
-     * @return string $type
      */
     abstract protected function getType(string &$value): string;
 }
