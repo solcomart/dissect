@@ -1,5 +1,5 @@
 {
-    "name": "goaop/dissect",
+    "name": "solcomart/dissect",
     "description": "A set of tools for lexical and syntactical analysis written in pure PHP",
     "version": "3.0.0",
     "type": "library",
